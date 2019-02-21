@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Select from 'react-select';
 import './App.css';
 
 class App extends Component {
@@ -10,7 +11,13 @@ class App extends Component {
         "tasks": [],
         "mentors": [],
       },
+      selectedOption: null,
     };
+  }
+
+  handleChange = (selectedOption) => {
+    this.setState({ selectedOption });
+    console.log(`Option selected:`, selectedOption);
   }
 
   componentDidMount() {
@@ -21,17 +28,15 @@ class App extends Component {
   }
 
   render() {
-
-    const data = this.state.data;
-    console.log(data);
+    const { selectedOption } = this.state;
+    const { data } = this.state;
+    const options = data.mentors.map(item => ({ value: item.mentorGithub, label: `${item.mentorName} (${item.mentorGithub})`}));
     return (
-      <ul>
-        {data.tasks.map(task =>
-          <li key={task.taskName}>
-            {task.taskName}
-          </li>
-        )}
-      </ul>
+      <Select
+        value={selectedOption}
+        onChange={this.handleChange}
+        options={options}
+      />
     );
   }
 }
