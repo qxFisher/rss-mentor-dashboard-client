@@ -1,26 +1,37 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      data: {
+        "tasks": [],
+        "mentors": [],
+      },
+    };
+  }
+
+  componentDidMount() {
+    const url = 'http://localhost:8000/api/data';
+    fetch(url)
+    .then(response => response.json())
+    .then(data => this.setState({data: data}));
+  }
+
   render() {
+
+    const data = this.state.data;
+    console.log(data);
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <ul>
+        {data.tasks.map(task =>
+          <li key={task.taskName}>
+            {task.taskName}
+          </li>
+        )}
+      </ul>
     );
   }
 }
