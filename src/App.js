@@ -35,7 +35,7 @@ class App extends Component {
     const options = data.mentors.map(item => ({ value: item.mentorGithub, label: `${item.mentorName} (${item.mentorGithub})`}));
 
     return (
-      <div key={_.uniqueId('div_')}>
+      <div key={_.uniqueId('div_')} className='container'>
         <Select
           key={_.uniqueId('td_')}
           value={selectedOption}

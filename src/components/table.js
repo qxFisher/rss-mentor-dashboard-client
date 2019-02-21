@@ -12,7 +12,7 @@ const table = (props) => {
     const tasksRow = tasks.map(task => 
       (
         <th key={_.uniqueId('task_')}> 
-          <a key={_.uniqueId('a_')} href={task.taskLink} className={task.taskStatus} target='_blank' rel='noopener noreferrer'>{task.taskName}</a>
+          <a key={_.uniqueId('a_')} href={task.taskLink} target='_blank' rel='noopener noreferrer'>{task.taskName}</a>
         </th>
       ));
 
@@ -21,26 +21,28 @@ const table = (props) => {
       const studentTasks = tasks.map(task => {
 				const checked = student.checkedTasks.some(item => item === task.taskName);
 				let status = task.taskStatus;
-				
+
 				if (checked) {
-						status = 'done';
+						status = 'Done';
 				}
 				return <td key={_.uniqueId('td_')} className={status}></td>;
 			});
-        
+			const studentLink = 'https://github.com/' + student.studentGithub;
 			return (
 					<tr key={_.uniqueId('tr_')}>
-							<td key={_.uniqueId('td_')}>{student.studentGithub}</td>
+							<td key={_.uniqueId('td_')}>
+								<a href={studentLink} target='_blank' rel='noopener noreferrer' key={_.uniqueId('a_')}>{student.studentGithub}</a>
+							</td>
 							{studentTasks}
 					</tr>
 			);
 		});
 
     return (
-        <table key={_.uniqueId('table_')}>
+        <table key={_.uniqueId('table_')} className='dashboard-table'>
             <thead key={_.uniqueId('thead_')}>
                 <tr key={_.uniqueId('tr_')}>
-                    <th key={_.uniqueId('th_')}>Students/Tasks</th>
+                    <th key={_.uniqueId('th_')}></th>
                     {tasksRow}
                 </tr>
             </thead>
