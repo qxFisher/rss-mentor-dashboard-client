@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
+import Table from './components/table';
+import _ from 'lodash';
 import './App.css';
 
 class App extends Component {
@@ -31,12 +33,21 @@ class App extends Component {
     const { selectedOption } = this.state;
     const { data } = this.state;
     const options = data.mentors.map(item => ({ value: item.mentorGithub, label: `${item.mentorName} (${item.mentorGithub})`}));
+
     return (
-      <Select
-        value={selectedOption}
-        onChange={this.handleChange}
-        options={options}
-      />
+      <div key={_.uniqueId('div_')}>
+        <Select
+          key={_.uniqueId('td_')}
+          value={selectedOption}
+          onChange={this.handleChange}
+          options={options}
+        />
+        <Table
+          key={_.uniqueId('table_')}
+          data={data}
+          selectedOption={selectedOption}
+        />
+      </div>
     );
   }
 }
