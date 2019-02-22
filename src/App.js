@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
-import Table from './components/table';
+import Table from './components/table/table';
 import _ from 'lodash';
 import './App.css';
 
@@ -13,13 +13,13 @@ class App extends Component {
         "tasks": [],
         "mentors": [],
       },
-      selectedOption: null,
+      selectedOption: JSON.parse(localStorage.getItem('mentor'))
     };
   }
 
   handleChange = (selectedOption) => {
+    localStorage.setItem('mentor', JSON.stringify(selectedOption));
     this.setState({ selectedOption });
-    console.log(`Option selected:`, selectedOption);
   }
 
   componentDidMount() {
