@@ -58,9 +58,11 @@ class App extends Component {
   
     if(user && !selectedOption) {
       const authMentor = data.mentors.find(mentor => mentor.mentorName.toLowerCase() === user.displayName.toLowerCase());
-      selectedOption = {
-      value: authMentor.mentorGithub,
-      label: `${authMentor.mentorName} (${authMentor.mentorGithub})`
+      if (authMentor) {
+        selectedOption = {
+        value: authMentor.mentorGithub,
+        label: `${authMentor.mentorName} (${authMentor.mentorGithub})`
+        }
       }
     }
     return (
