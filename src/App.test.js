@@ -1,9 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './App';
+import {render, cleanup} from 'react-testing-library';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+afterEach(cleanup);
+
+it('Main div renders without crashing', () => {
+  render(<App />);
+
+  const div = document.querySelector('div');
+  expect(div).toBeTruthy();
+});
+
+it('Login wrapper renders without crashing', () => {
+  render(<App />);
+
+  const loginSection = document.querySelector('.login__wrapper');
+  expect(loginSection).toBeTruthy();
 });

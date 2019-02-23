@@ -53,7 +53,7 @@ class App extends Component {
   render() {
     const { user, data } = this.state;
     let { selectedOption } = this.state;
-
+    console.log(selectedOption);
     const options = data.mentors.map(item => ({ value: item.mentorGithub, label: `${item.mentorName} (${item.mentorGithub})`}));
   
     if(user && !selectedOption) {

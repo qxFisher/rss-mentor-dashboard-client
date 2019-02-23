@@ -5,7 +5,7 @@ import './table.css';
 const table = (props) => {
   const { selectedOption } = props;
   const { data } = props;
-  if(selectedOption && data.mentors.length > 1) {
+  if(selectedOption && data.mentors.length >= 1) {
     const { tasks, mentors } = data;
 
     const tasksRow = tasks.map(task => 
