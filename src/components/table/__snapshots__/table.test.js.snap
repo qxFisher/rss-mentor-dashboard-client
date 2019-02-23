@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table changes the cells when new option selected 1`] = `
+<table
+  className="dashboard-table"
+>
+  <thead>
+    <tr>
+      <th />
+      <th>
+        <a
+          href="https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/codejam-cv.md"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Code Jam "CV"
+        </a>
+      </th>
+      <th>
+        <a
+          href="https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/codejam-corejs.md"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Code Jam "CoreJS"
+        </a>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a
+          href="https://github.com/uniorunr"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          uniorunr
+        </a>
+      </td>
+      <td
+        className="Checked"
+      />
+      <td
+        className="Checked"
+      />
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="https://github.com/alexeydavydov"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          alexeydavydov
+        </a>
+      </td>
+      <td
+        className="Checked"
+      />
+      <td
+        className="Checked"
+      />
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="https://github.com/melllivoracapensis"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          melllivoracapensis
+        </a>
+      </td>
+      <td
+        className="Checked"
+      />
+      <td
+        className="Checked"
+      />
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="https://github.com/soulshaker"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          soulshaker
+        </a>
+      </td>
+      <td
+        className="Checked"
+      />
+      <td
+        className="Checked"
+      />
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Table to match snapshot 1`] = `
+<table
+  className="dashboard-table"
+>
+  <thead>
+    <tr>
+      <th />
+      <th>
+        <a
+          href="https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/codejam-cv.md"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Code Jam "CV"
+        </a>
+      </th>
+      <th>
+        <a
+          href="https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/codejam-corejs.md"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Code Jam "CoreJS"
+        </a>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a
+          href="https://github.com/uniorunr"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          uniorunr
+        </a>
+      </td>
+      <td
+        className="Checked"
+      />
+      <td
+        className="Checked"
+      />
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="https://github.com/alexeydavydov"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          alexeydavydov
+        </a>
+      </td>
+      <td
+        className="Checked"
+      />
+      <td
+        className="Checked"
+      />
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="https://github.com/melllivoracapensis"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          melllivoracapensis
+        </a>
+      </td>
+      <td
+        className="Checked"
+      />
+      <td
+        className="Checked"
+      />
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="https://github.com/soulshaker"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          soulshaker
+        </a>
+      </td>
+      <td
+        className="Checked"
+      />
+      <td
+        className="Checked"
+      />
+    </tr>
+  </tbody>
+</table>
+`;
